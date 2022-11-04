@@ -1,21 +1,60 @@
-<!doctype html>
-  <html>
-    <head>
-      <title>Our Funky HTML Page</title>
-        <meta name="description" content="Our first page">
-        <meta name="keywords" content="html tutorial template">
-    </head>
-    <body>
-	<div>
-	      <div id="root"></div>
-	</div>
-    </body>
-    
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="index.js"></script>
-	  <script src="App.js"></script>
-		<script src="Flashcard.js"></script>
-		<script src="FlashcardList.js"></script>
-		<script src="App.css"></script>
-  </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>By Heart</title>
+    <script
+      src="https://kit.fontawesome.com/051618b025.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/timer.js"></script>
+	<script src="flashcards.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <a href="index.html">
+        <button class="main_button" id="by-heart">By Heart</button></a
+      >
+    </div>
+    <div class="topbar-under"></div>
+    <div class="section">
+      <h2>Create a Set</h2>
+      <div class="setbody">
+        <div class="inputfields">
+          <label for="question">Term: </label>
+          <textarea id="question"></textarea>
+          <label for="answer">Definition: </label>
+          <textarea id="answer"></textarea>
+        </div>
+        <div class="setbuttons">
+          <button onclick = "addCards()" class="main_button medium">Add Card</button>
+          <button onclick = "deleteDeck()" class="main_button medium">Delete Deck</button>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="Flashcard">
+      <h1>Your Flashcards</h1>
+      <div class="flash_body">
+        <div class="leftarrow">
+          <button class="arrow_button">
+            <i class="fa-solid fa-caret-left fa-6x"></i>
+          </button>
+        </div>
+        <div class="flashcard">
+        </div>
+        <div class="rightarrow">
+          <button class="arrow_button">
+            <i class="fa-solid fa-caret-right fa-6x"></i>
+          </button>
+        </div>
+      </div>
+      <div class="timer">
+        <p id="timer" />
+      </div>
+      <div class="button_row"><button class="main_button large">Flip Card</button><button class="main_button large">Edit Card</button></div>
+    </div>
+  </body>
+</html>
