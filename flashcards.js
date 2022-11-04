@@ -1,6 +1,6 @@
 // Accessing the various divs with elements we need to add JS to
 const flashcard = document.getElementsByClassName("flashcard")[0];
-const setbuttons = document.getElementByClassName("setbuttons")[0];
+const setbuttons = document.getElementsByClassName("setbuttons")[0];
 const question = document.getElementById("question");
 const answer = document.getElementById("answer");
 
@@ -22,8 +22,8 @@ function deleteDeck() {
 // Add a card
 function addCards() {
 	var flashcardInfo = {
-		'question' : question.value,
-		'answer' : answer.value
+		'my_question' : question.value,
+		'my_answer' : answer.value
 	}
 
 	cardsArray.push(flashcardInfo);
