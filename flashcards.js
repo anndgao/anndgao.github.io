@@ -5,7 +5,7 @@ const question = document.getElementById("question");
 const answer = document.getElementById("answer");
 
 // Array for data from flashcards
-let cardsArray = localStore.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+let cardsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 
 // Display cards
 contentArray.forEach(showCard);
